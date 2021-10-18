@@ -42,9 +42,9 @@ const Product=mongoose.model('product',productSchema);
 app.use(express.static(__dirname+"/public"));
 app.use("/uploads", express.static("uploads"));
 cloudinary.config({
-  cloud_name: "duibbfwvo",
-  api_key: "829383958558157",
-  api_secret: "WiIgfc7yb3PR9vizMoqNHXFxd4I",
+  cloud_name: process.env.CNAME,
+  api_key: process.env.API_KEY,
+  api_secret: process.env.API_SEC,
   secure: true
 });
 
